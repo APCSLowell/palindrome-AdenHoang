@@ -37,13 +37,45 @@ public void tester()
 }
 public boolean palindrome(String word)
 {
-  //your code here
+ String Adenn = new String();               // letters only
+  for (int i =0; i<word.length(); i++)
+  {
+if(Character.isLetter(word.charAt(i)))
+Adenn+=word.charAt(i);
+  }
+  
+    String gojoo = new String();
+  for (int i=0; i<Adenn.length(); i++){
+    if (Adenn.charAt(i)!=' ')
+gojoo+=Adenn.charAt(i);    
+  }
+ gojoo = gojoo.toLowerCase();
+  
+  if (gojoo.equals(reverse(word)))
+  return true;
   return false;
 }
 public String reverse(String str)
 {
-    String sNew = new String();
-    //your code here
+  String aden = new String();               // letters only
+  for (int i =0; i<str.length(); i++)
+  {
+if(Character.isLetter(str.charAt(i)))
+aden+=str.charAt(i);
+  }
+  
+    String gojo = new String();
+  for (int i=0; i<aden.length(); i++){
+    if (aden.charAt(i)!=' ')
+gojo+=aden.charAt(i);    
+  }
+  
+    String sNew = new String();             
+   for (int s = gojo.length()-1;s>=0; s--)
+   {
+     sNew+=gojo.charAt(s);
+   }
+sNew=sNew.toLowerCase();
     return sNew;
 }
 }
